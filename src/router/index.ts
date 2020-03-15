@@ -15,6 +15,8 @@ import VueRouter from 'vue-router';
 // import Cloud from '../views/Cloud.vue';
 // import Collection from '../views/Collection.vue';
 // import Musiclist from '../views/Musiclist.vue';
+// import Search from '../views/Search.vue';
+// import Setting from '../views/Setting.vue';
 
 
 Vue.use(VueRouter);
@@ -98,6 +100,11 @@ const routes = [
     path: '/search',
     name: 'search',
     component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
+  },
+  {
+    path: '/setting',
+    name: 'setting',
+    component: () => import(/* webpackChunkName: "setting" */ '../views/Setting.vue')
   }
 ]
 

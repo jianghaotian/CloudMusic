@@ -53,6 +53,7 @@ export default class AsideBar extends Vue {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 200px;
   background-color: #ededed;
 
 
