@@ -17,7 +17,7 @@ export default class TopBar extends Vue {
 <style lang="scss" scoped>
 .top_bar {
 
-  background-color: #c9584d;
+  background-color: #c9594e;
 
 }
 

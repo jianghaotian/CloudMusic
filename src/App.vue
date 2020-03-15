@@ -40,21 +40,39 @@ export default class App extends Vue {
 
 <style lang="scss">
 html, body {
-  width: 100%;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
+ul, li {
+  padding:0;
+  margin:0;
+  list-style:none
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #303133;
+  &:link{text-decoration: none;}
+  &:visited {text-decoration: none;}
+  &:hover {text-decoration: none;}
+  &:active {text-decoration: none;}
+}
 #app {
-  width: 100%;
   height: 100%;
+  width: 100%;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,sans-serif;
+  font-size: 14px;
+  color: #303133;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .el-container {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 .el-header {
   padding: 0;

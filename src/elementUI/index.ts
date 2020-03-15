@@ -4,7 +4,8 @@ import {
   Header,
   Aside,
   Main,
-  Footer
+  Footer,
+  Avatar,
 
 
 } from 'element-ui';
@@ -14,4 +15,5 @@ Vue.use(Header);
 Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
+Vue.use(Avatar);
 
