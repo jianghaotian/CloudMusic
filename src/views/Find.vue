@@ -27,14 +27,11 @@ export default class Find extends Vue {
   created () {
     this.axios.get('/personalized', {params: {limit: 10}}).then(res => {
       this.musicList = res.data.result;
-      console.log(res);
+      // console.log(res);
       
     })
 
   }
-
-
-
 
 
 }

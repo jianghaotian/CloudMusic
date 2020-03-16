@@ -92,7 +92,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "collection" */ '../views/Collection.vue')
   },
   {
-    path: '/musiclist',
+    path: '/musiclist/:id',
     name: 'musiclist',
     component: () => import(/* webpackChunkName: "musiclist" */ '../views/Musiclist.vue')
   },

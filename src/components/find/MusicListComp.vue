@@ -3,7 +3,7 @@
 
     <div class="box" v-for="item in list" :key="item.id">
       <!-- TODO -->
-      <router-link to="">
+      <router-link :to="`/musiclist/${item.id}`">
         <img :src="item.picUrl" width="196px" @mouseenter="show(item.id)" @mouseleave="unshow(item.id)">
       </router-link>
       <!-- TODO -->

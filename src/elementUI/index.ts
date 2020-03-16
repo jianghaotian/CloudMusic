@@ -5,7 +5,8 @@ import {
   Aside,
   Main,
   Footer,
-  Avatar
+  Avatar,
+
 
 } from 'element-ui';
 
@@ -15,5 +16,6 @@ Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
 Vue.use(Avatar);
+
 
 
