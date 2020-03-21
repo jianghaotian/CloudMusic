@@ -6,6 +6,7 @@ import {
   Main,
   Footer,
   Avatar,
+  Slider
 
 
 } from 'element-ui';
@@ -16,6 +17,7 @@ Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
 Vue.use(Avatar);
+Vue.use(Slider);
 
 
 

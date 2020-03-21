@@ -69,6 +69,7 @@ a {
   color: #303133;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 .el-container {
   height: 100%;
@@ -77,13 +78,15 @@ a {
 .el-header {
   padding: 0;
   line-height: 50px;
+  overflow: hidden;
 }
 .el-footer {
   padding: 0;
   line-height: 60px;
+  // overflow: hidden;
 }
 .el-aside {
-
+  overflow: hidden;
 }
 .el-main {
   padding: 0;
