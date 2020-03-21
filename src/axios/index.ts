@@ -22,6 +22,8 @@ axios.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
+export default axios;
+
 // 返回状态判断(添加响应拦截器)
 // axios.interceptors.response.use((res) =>{
 //   // 对响应数据做些事

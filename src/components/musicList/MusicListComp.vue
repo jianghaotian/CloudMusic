@@ -8,7 +8,7 @@
         <th align="left">专辑</th>
         <th align="left">时长</th>
       </tr>
-      <tr v-for="(item, index) in musicList" :key="item.id" :class="{even: index % 2 === 0, select: selectId === item.id}" @click="clickMusic(item.id)">
+      <tr v-for="(item, index) in musicList" :key="item.id" :class="{even: index % 2 === 0, select: selectId === item.id}" @click="selectId=item.id" @dblclick="dblclickMusic(item.id)">
         <td class="hh">
           <span>{{index + 1 < 10 ? '0' + (index + 1) : index + 1}}</span>
           <!-- TODO -->
@@ -33,13 +33,9 @@ export default class MusicListComp extends Vue {
 
   selectId = 0;
 
-  clickMusic (id: number) {
-    this.selectId = id;
-
-
+  dblclickMusic (id: number) {
+    this.$store.dispatch('playMusic', {id: id});
   }
-
-
 }
 </script>
 
