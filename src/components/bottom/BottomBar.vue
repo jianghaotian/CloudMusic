@@ -186,10 +186,13 @@ export default class BottomBar extends Vue {
       }
     }
     .play_control {
+      display: flex;
+      margin-top: 10px;
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 50%;
-      transform: translateY(-50%);
+
+      transform: translateX(-50%);
 
       .play_button {
         height: 40px;
