@@ -26,6 +26,12 @@ export default {
   },
   endedPlay (state: State) {
     state.playState = 0;
+  },
+
+  newPlayList (state: State, payload: any) {
+    state.playList = payload.list;
+    state.playIndex = payload.index;
+    console.log(payload.list);
   }
   
 };
