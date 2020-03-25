@@ -31,7 +31,7 @@ export default {
   newPlayList (state: State, payload: any) {
     state.playList = payload.list;
     state.playIndex = payload.index;
-    console.log(payload.list);
+    // console.log(payload.list);
   }
   
 };

@@ -29,7 +29,7 @@
       <div class="play_control">
 
         <div class="list_button">
-          <i class="iconfont icon-shangyishou" @click="$store.playIndex > 0 ? $store.dispatch('playMusic', {index: $store.state.playIndex - 1, list: $store.state.playList}) : ()=>{}"></i>
+          <i class="iconfont icon-shangyishou" @click="$store.state.playIndex > 0 ? $store.dispatch('playMusic', {index: $store.state.playIndex - 1, list: $store.state.playList}) : ()=>{}"></i>
         </div>
 
         <div class="play_button" @click="$store.commit('changePlayState')">
