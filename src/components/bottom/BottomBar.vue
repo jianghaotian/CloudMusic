@@ -28,9 +28,17 @@
       </div>
       <div class="play_control">
 
+        <div class="list_button">
+          <i class="iconfont icon-shangyishou" @click="$store.playIndex > 0 ? $store.dispatch('playMusic', {index: $store.state.playIndex - 1, list: $store.state.playList}) : ()=>{}"></i>
+        </div>
+
         <div class="play_button" @click="$store.commit('changePlayState')">
           <i v-show="$store.state.playState === 0" class="iconfont icon-bofang"></i>
           <i v-show="$store.state.playState === 1" class="iconfont icon-zanting" style="margin: 0;"></i>
+        </div>
+
+        <div class="list_button">
+          <i class="iconfont icon-xiayishou" @click="$store.state.playIndex < $store.state.playList.length - 1 ? $store.dispatch('playMusic', {index: $store.state.playIndex + 1, list: $store.state.playList}) : ()=>{}"></i>
         </div>
 
       </div>
@@ -194,12 +202,23 @@ export default class BottomBar extends Vue {
 
       transform: translateX(-50%);
 
+      .list_button {
+        height: 40px;
+        // width: 40px;
+        line-height: 40px;
+        color: #c3463a;
+        i {
+          cursor: pointer;
+        }
+      }
+
       .play_button {
         height: 40px;
         width: 40px;
         line-height: 40px;
         border-radius: 20px;
         background-color: #c3463a;
+        margin: 0 25px;
         text-align: center;
         cursor: pointer;
 
