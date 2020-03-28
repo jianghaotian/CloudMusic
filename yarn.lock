@@ -869,6 +869,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/lyric-parser@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/@types/lyric-parser/download/@types/lyric-parser-1.0.0.tgz#2917317fcc898a658cf8d9f4d76b676be4832114"
+  integrity sha1-KRcxf8yJimWM+Nn012tna+SDIRQ=
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.npm.taobao.org/@types/minimatch/download/@types/minimatch-3.0.3.tgz?cache=0&sync_timestamp=1580842916770&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fminimatch%2Fdownload%2F%40types%2Fminimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -4908,6 +4913,11 @@ lru-cache@^5.1.1:
   integrity sha1-HaJ+ZxAnGUdpXa9oSOhH8B2EuSA=
   dependencies:
     yallist "^3.0.2"
+
+lyric-parser@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/lyric-parser/download/lyric-parser-1.0.1.tgz#a1f8aa77653cf947ecf94df51d5f816afc9ed44c"
+  integrity sha1-ofiqd2U8+Ufs+U31HV+Bavye1Ew=
 
 make-dir@^2.0.0:
   version "2.1.0"

@@ -15,7 +15,7 @@
       <!-- @play="onPlay" -->
     <div class="bottom">
       <div class="music_info" v-show="$store.state.playUrl != ''">
-        <img :src="$store.state.musicImgUrl" width="40px" height="40px">
+        <img :src="$store.state.musicImgUrl" width="40px" height="40px" @click="$store.commit('changeLyric')">
         
         <div class="info">
           <div class="name">
@@ -121,18 +121,19 @@ export default class BottomBar extends Vue {
   // 音乐时间整理
   realFormatSecond(second: any) {
     var secondType = typeof second;
+    this.$store.commit('changePlayTime', {playTime: second * 1000})
+    let playTime = '0:00';
     if (secondType === 'number' || secondType === 'string') {
       second = parseInt(second);
       var hours = Math.floor(second / 3600);
       second = second - hours * 3600;
       var mimute = Math.floor(second / 60);
       second = second - mimute * 60;
-      return hours == 0 ? 
+      playTime = hours == 0 ? 
         mimute + ':' + ('0' + second).slice(-2) :
         hours + ':' + mimute + ':' + ('0' + second).slice(-2);
-    } else {
-      return '0:00';
     }
+    return playTime;
   }
 
 
@@ -142,6 +143,7 @@ export default class BottomBar extends Vue {
 <style lang="scss" scoped>
 .bottom_bar {
   position: relative;
+  background-color: #fff;
 
   .slider {
     position: absolute;

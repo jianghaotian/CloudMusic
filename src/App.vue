@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <el-container>
-        <el-header height="50px">
-          <TopBar/>
-        </el-header>
+    <el-container class="app_box">
+      <el-header height="50px">
+        <TopBar/>
+      </el-header>
+<!-- v-show="$store.state.lyric"  -->
+      <Lyric :class="$store.state.lyric ? 'show' : ''"/>
       <el-container>
         <el-aside width="200px">
           <AsideBar/>
@@ -12,6 +14,7 @@
           <router-view/>
         </el-main>
       </el-container>
+
       <el-footer height="60px">
         <BottomBar/>
       </el-footer>
@@ -23,13 +26,16 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import TopBar from './components/top/TopBar.vue';
 import AsideBar from './components/aside/AsideBar.vue';
-import BottomBar from './components/bottom/BottomBar.vue'
+import BottomBar from './components/bottom/BottomBar.vue';
+
+import Lyric from './views/Lyric.vue';
 
 @Component({
   components: {
     TopBar,
     AsideBar,
-    BottomBar
+    BottomBar,
+    Lyric
   }
 })
 export default class App extends Vue {
@@ -37,6 +43,25 @@ export default class App extends Vue {
 
 }
 </script>
+
+<style lang="scss" scoped>
+.app_box {
+  position: relative;
+  
+  .lyric {
+    top: 100%;
+    transition: all .3s ease;
+  }
+  .show {
+    top: 50px;
+    transition: all .3s ease;
+  }
+
+
+}
+
+</style>
+
 
 <style lang="scss">
 html, body {
