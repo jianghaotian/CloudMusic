@@ -32,6 +32,15 @@ export default {
     state.playList = payload.list;
     state.playIndex = payload.index;
     // console.log(payload.list);
+  },
+
+  changeLyric (state: State) {
+    state.lyric = !state.lyric;
+  },
+
+  changePlayTime (state: State, payload: any) {
+    state.playTime = payload.playTime;
   }
   
+
 };

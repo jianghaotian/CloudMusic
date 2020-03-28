@@ -56,7 +56,7 @@ export default class MusicList extends Vue {
   createTime: string = '';
 
   created() {
-    this.axios.get('/playlist/detail?', {params: {id: this.$route.params.id}}).then(res => {
+    this.axios.get('/playlist/detail', {params: {id: this.$route.params.id}}).then(res => {
       this.playlist = res.data.playlist;
       var date = new Date(res.data.playlist.createTime);
       var YY = date.getFullYear();
